@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes</title>
+</head>
+
+<body>
+    <h3>What is js</h3>
+    <p>javascript is a programming language that enables you to create interactive web pages.<br>
+        It allows developers to add functionality to websites, such as animations, form validation, and more.
+        <br>JavaScript is a versatile language that can be used for web development, mobile app development, game
+        development
+        <br> javascript is a dynamic programming
+
+    </p>
+    js -- only used in browser<br>
+    later - js embeded in c++ then it is called as node<br>
+    ecmaScript (es6) -- it is just specification
+
+    <p> we can keep js content in html in body or in head section<br>
+        we use script tag to add js code or js file in html
+        <br>
+        best practice is to place at end of body of html document so that it does not block the loading of other content
+        <br>
+        node fileName.js -- to execute the js in command line
+    </p>
+
+    <h3>variables</h3>
+    <p>variables are used to store data in a program.<br>
+        by default they were undefined</p>
+
+    <h3>rules to write variable name </h3>
+    <ul>
+        <li>can not use reserved keyword</li>
+        <li>should be meaningful names</li>
+        <li>can not start with umbers</li>
+        <li>can not contain spaces or special characters except underscore _</li>
+        <li>camel notation is used for variable names (firstName) </li>
+        <li>they are case-sensitive</li>
+    </ul>
+
+    <h3>Types of variables</h3>
+    <ul>
+        <li>var</li>
+        <li>let</li>
+        <ul>
+            <li>
+                block scope
+            </li>
+            <li>can re - assign</li>
+        </ul>
+        <li>const
+            <ul>
+                <li>block scope </li>
+                <li>can not re-assign</li>
+            </ul>
+        </li>
+
+    </ul>
+
+    <h3>types of dataType</h3>
+    <ol>
+        <li>Primitive type
+            <ul>
+                <li>string -- let name = 'sharon';</li>
+                <li>number -- let age = 21;</li>
+                <li>boolean -- let isApproved = false;</li>
+                <li>undefined</li>
+                <li>null</li>
+            </ul>
+        </li>
+        <li>reference type
+            <ul>
+                <li>objects -- let person = {name: 'sharon', age: 21}; </li>
+                <p>chaning the properties of objects</p>
+                <ul>
+                    <li> dot notation -- person.name = 'sharon';<br>
+                        syntax -- objectName.propertyName = 'value'</li>
+        </li>
+        <li>bracket notation -- person['name'] = 'jessy'<br>
+            syntax -- objectName['propertyName'] = value</li>
+        </ul>
+        <li> arrays -- let fruits = ['apple', 'banana', 'cherry'];<br>
+            []; -- array literal <br>
+            acessing elements -- using index</li>
+        </ul>
+        </li>
+
+    </ol>
+    <h3>Functions</h3>
+
+    <h3>Arrays</h3>
+    <h3>Objects</h3>
+    <p>It is a data structure that stores a related data as a key - value pair</p>
+
+    <ul>
+        <li>
+            <h4>Two ways to create objects</h4>
+        </li>
+        <ol>
+            <li><b>Creation Using Object Literal</b></li>
+            <p>The object literal syntax allows you to define and initialize an object with curly braces {}, setting
+                properties as key-value pairs.</p>
+            <p>example : let obj = {<br>
+                name: "Sourav",<br>
+                age: 23,<br>
+                job: "Developer"<br>
+                };<br>
+                console.log(obj);</p>
+            <li><b>Creation Using new Object() Constructor</b></li>
+            <p>let obj = new Object();<br>
+                obj.name= "Sourav",<br>
+                obj.age= 23,<br>
+                obj.job= "Developer"<br>
+
+                console.log(obj);</p>
+        </ol>
+
+        <li>
+            <h4>Itrate Over a Object</h4>
+        </li>
+        <ol>
+            <li><b>Using for...in Loop</b></li>
+            <p>We use hasOwnProperty() to ensure that only the object's own properties are processed.</p>
+            <p>example:<br>
+                <img src="images\iterateObject_hasOwnProperty.png" width="300px">
+            </p>
+
+            <li><b>Using Object.entries() and forEach()</b></li>
+            <p>The Object.entries() method returns an array containing the object's own enumerable key-value pairs.</p>
+            <p>example:<br>
+                <img src="images/iterateObject_entries.png" width="300px">
+            </p>
+
+            <li><b>Using Object.key() and forEach</b></li>
+            <p>The Object.keys() method returns an array containing the object's own enumerable keys</p>
+            <p>Example:<br>
+                <img src="images/iterateobjectUsingkeys.png" width="300px">
+            </p>
+
+        </ol>
+    </ul>
+
+    <h3>Rest Parameter and Spread Operator</h3>
+    <p>They were introduced in ES6 <br>
+        <b>Why?</b> -- to handle the functions and arrays more flexible<br>
+        <b>operator</b> -- ( ... )<br>
+    </p>
+    <ol>
+        <li><b>Rest parameter</b></li>
+        <p>The Rest Parameter allows functions to accept an indefinite number of arguments as an array.
+            It collects multiple arguments into a single array parameter.<br>
+            Example:<br>
+            <img src="images/exampleOfRestParameter.png" width="200px">
+        </p>
+
+        <li><b>Spread Operator</b></li>
+        <p>used to expand an array or object into individual elements<br>combine multiple arrays into one<br>
+            Example:<br>
+            <img src="images/exampleOfSpreadOperator.png" width="200px">
+        </p>
+
+        <b>use case of Spread Operator</b>
+        <ul>
+            <li>Merging Array</li>
+            <li>Cloning array</li>
+            <li>Combining objects</li>
+        </ul>
+    </ol>
+    <p><img src="images/DifferenceRestAndSpread.png" width="500px"></p>
+
+    <h3>Shallow Copy and Deep Copy</h3>
+
+    <h3>Destructuring</h3>
+
+    <h3>Synchronous programming</h3>
+    <p>Performing task one by one</p>
+
+    <h3>Asynchronous programming</h3>
+    <p>perform task independently does not depend on other </p>
+
+    <h3>Callback</h3>
+    <p>Calling a function in another function <br> it forms connection between functions</p>
+
+    <h3>Promises </h3>
+
+    <h3>Async and Await </h3>
+
+
+    <h3>Fetch API</h3>
+
+    <h3>DOM</h3>
+    <p>DOM -- Document Object Model <br> Represent the structure of HTML Document as Tree of object<br>
+        It allows JavaScript to interact with and modify the content and elements of a webpage dynamically.<br>
+        <img src="images/Dom.png" width="300px"> <br>
+        <b>Features of JavaScript DOM</b><br>
+    <ul>
+        <li>Tree Structure: Represents the HTML document as a hierarchical tree of nodes.</li>
+        <li>Element Access: Provides methods to select elements such as getElementById, getElementsByTagName, and
+            querySelector</li>
+        <li>Dynamic Manipulation: Allows changing content, attributes, and styles dynamically.</li>
+        <li>Event Handling: Supports handling user interactions like clicks and keyboard events.</li>
+    </ul>
+    <b>Accessing the Elements</b>
+    <ul>
+        <li><b>getElementById</b>: Returns the element with the specified id</li>
+        <li><b>getElementByClassName</b>: Returns a collection of elements with a specified class.</li>
+        <li><b>getElementsByTagName</b> : Selects elements by their tag name.</li>
+        <li><b>querySelector</b>: Returns the first element matching a CSS selector.</li>
+        <li><b>querySelectorAll</b>: Returns all elements matching a CSS selector.</li>
+    </ul>
+    <b>Modifying the elements</b>
+    <ul>
+        <li><b>Changing Content</b>: You can modify the content of an element using textContent or innerHTML.</li>
+        <li><b>Changing Attributes</b>: You can modify attributes like src, href, alt, etc.<br>
+            document.getElementById("myImage").src = "new-image.jpg";</li>
+        <li><b>Create an element:</b>let newPara = document.createElement("p");<br>
+            newPara.textContent = "This is a new paragraph.";<br>
+            document.body.appendChild(newPara);</li>
+        <li><b>Remove an element:</b>let oldPara = document.getElementById("removeMe");<br>
+            oldPara.remove();</li>
+    </ul>
+    <b>Event Handling in the DOM</b>
+    <ul>
+        <li><b>Adding an Event Listener</b><br>
+            document.getElementById("btn").addEventListener("click", function() { <br>
+            alert("Button Clicked!");
+            });</li>
+        <li><b>Removing an Event Listener</b><br>
+            function sayHello() { <br>
+            console.log("Hello!");<br>
+            }<br>
+            let btn = document.getElementById("btn");<br>
+            btn.addEventListener("click", sayHello);<br>
+            btn.removeEventListener("click", sayHello);</li>
+        <li><b>Event Object</b><br>
+            document.getElementById("inputField").addEventListener("keyup", function(event) {<br>
+            console.log("Key pressed: ", event.key);<br>
+            });</li>
+    </ul>
+
+    <b>Traversing the DOM</b>
+    <ul>
+        <li>parentNode: Returns the parent node.</li>
+        <li>children: Returns all child elements.</li>
+        <li>firstElementChild / lastElementChild: Returns the first or last child element.</li>
+        <li>nextElementSibling / previousElementSibling: Returns the next or previous sibling element</li>
+        <br>
+        Example : let parent = document.getElementById("myDiv").parentNode;<br>
+        console.log(parent.tagName);
+    </ul>
+    </p>
+
+    <h3>Events</h3>
+    <p>Events are actions or occurrences that happen in the browser.</p>
+    <ul>
+        <li><b>Event Types</b>
+            <ul>
+                <li><b>Mouse Events:</b> click, dblclick, mousemove, mouseover, mouseout</li>
+                <li><b>Keyboard Events:</b> keydown, keypress, keyup</li>
+                <li><b>Form Events: </b>submit, change, focus, blur</li>
+                <li><b>Window Events:</b> load, resize, scroll</li>
+            </ul>
+        </li>
+        <b>Common JavaScript Events</b>
+        <ul>
+            <li>onclick: Triggered when an element is clicked.</li>
+            <li>onmouseover: Fired when the mouse pointer moves over an element.</li>
+            <li>onmouseout: Occurs when the mouse pointer leaves an element.</li>
+
+            <li>onkeydown: Fired when a key is pressed down.</li>
+            <li>onkeyup: Fired when a key is released.</li>
+            <li>onchange: Triggered when the value of an input element changes.</li>
+            <li>onload: Occurs when a page has finished loading.</li>
+            <li>onsubmit: Fired when a form is submitteds.</li>
+            <li>onfocus: Occurs when an element gets focus.</li>
+            <li>onblur: Fired when an element loses focus.</li>
+        </ul>
+        <li><b>JavaScript Event Handlers</b></li>
+        <ul>
+            Event handlers can be used to handle and verify user input, user actions, and browser actions:
+            <li> Things that should be done every time a page loads.</li>
+            <li> Things that should be done when the page is closed.</li>
+            <li> Action that should be performed when a user clicks a button.</li>
+            <li> Content that should be verified when a user inputs data.</li>
+
+            <br>There are several ways to handle events in JavaScript:
+
+            <li>HTML event attributes can execute JavaScript code directly.</li>
+            <li>HTML event attributes can call JavaScript functions.</li>
+            <li>You can assign your own event handler functions to HTML elements.</li>
+            <li>You can prevent events from being sent or being handled.</li>
+        </ul>
+        <li><b>Event Handling Methods</b></li>
+        <ul>
+            <li><b> Inline HTML Handlers :</b><br>
+                Inline HTML handlers are the simplest way to handle events in JavaScript.<br>
+                < button onclick="alert('Button clicked!')">Click Me< /button>
+            </li>
+            <li><b>DOM Property Handlers:</b><br>
+                let btn = document.getElementById("myButton");<br>
+                btn.onclick = () => {<br>
+                alert("Button clicked!");<br>
+                };
+            </li>
+            <li><b> addEventListener() (Preferred)</b><br>
+                btn.addEventListener("click", () => {<br>
+                alert("Button clicked using addEventListener!");<br>
+                });<br>
+                <br>
+                // Mouse Event<br>
+                document.addEventListener("mousemove", (e) => {<br>
+                console.log(`Mouse moved to (${e.clientX}, ${e.clientY})`);<br>
+                });<br>
+                <br>
+                // Keyboard Event<br>
+                document.addEventListener("keydown", (e) => {<br>
+                console.log(`Key pressed: ${e.key}`);<br>
+                });
+            </li>
+        </ul>
+        <li><b>Preventing Default Behavior</b></li>
+    </ul>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
