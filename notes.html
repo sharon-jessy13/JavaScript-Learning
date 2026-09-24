@@ -332,8 +332,41 @@
     </ul>
     <h3>Event Loop</h3>
     <p>It is a concepts in JavaScript that manages the execution of asynchronous code.<br>
-    Since, javascript is a single thread language it uses the event loop to manage the execution of 
-    multiple tasking without blocking the main thread.</p>
+        Since, javascript is a single thread language it uses the event loop to manage the execution of
+        multiple tasking without blocking the main thread.</p>
+    <ul>
+        <li><b>Working of event loop</b><br>
+            <p>The event loop continuously checks whether the call stack is empty and whether there are pending tasks in
+                the callback queue or microtask queue.</p>
+            <img src="images/workingOfEventLoop.png" width="400px"><br>
+            <ul>
+                <li><b>Call Stack: </b>JavaScript has a call stack where function execution is managed in a Last-In,
+                    First-Out
+                    (LIFO) order.</li>
+                <li><b>Web APIs (or Background Tasks):</b> These include setTimeout, setInterval, fetch, DOM events, and
+                    other
+                    non-blocking operations.</li>
+                <li><b>Callback Queue (Task Queue):</b> When an asynchronous operation is completed, its callback is
+                    pushed into
+                    thetask queue.</li>
+                <li><b>Microtask Queue: </b>Promises (.then(), .catch(), .finally()) and other microtasks are placed
+                    here. The
+                    microtask queue is always fully executed (drained) before moving to the next macrotask.
+                </li>
+                <li><b>Event Loop:</b> It continuously checks the call stack and, if empty, moves tasks from the queue
+                    to the
+                    stack for execution.</li>
+        </li>
+    </ul>
+    <li><b>Common causes related to event loop </b></li>
+    <ol>
+        <li>Blocking the Main Thread</li>
+        <li>Delayed Execution of setTimeout</li>
+        <li>Priority of Microtasks Over Callbacks</li>
+        <li>Callback Hell</li>
+        
+    </ol>
+    </ul>
 
 
     <script src="index.js"></script>
