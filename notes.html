@@ -322,8 +322,18 @@
                 });
             </li>
         </ul>
-        <li><b>Preventing Default Behavior</b></li>
+        <li><b>Preventing Default Behavior</b><br>Certain elements have default actions (e.g., links navigating to
+            URLs). Use preventDefault() to override them.
+            <br>document.querySelector("a").addEventListener("click", (e) => {<br>
+            e.preventDefault();<br>
+            console.log("Link click prevented");<br>
+            });
+        </li>
     </ul>
+    <h3>Event Loop</h3>
+    <p>It is a concepts in JavaScript that manages the execution of asynchronous code.<br>
+    Since, javascript is a single thread language it uses the event loop to manage the execution of 
+    multiple tasking without blocking the main thread.</p>
 
 
     <script src="index.js"></script>
